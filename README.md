@@ -35,7 +35,8 @@ Response Example:
 }
 ```
 
-
+* 该接口返回所有可能的娃娃类型，在工具启动时调用一次即可
+* id为某种娃娃的类型，在芯片数据入库时，需要指定芯片和娃的绑定关系
 ### NFC芯片数据入库
 
 END Point: character/uuids
@@ -46,5 +47,21 @@ Content-type: application/json
 
 Request body (example):
 ```JSON
-
+{
+	"physical_id":"e01d50528225811b",
+	"genre_id":2
+}
 ```
+
+Response:
+```JSON
+{
+    "status": 200,
+    "data": {
+        "id": 2,
+        "key": "FACE0023435AD950337CD090680C9262"
+    }
+}
+```
+
+* key为需要写入芯片的秘钥

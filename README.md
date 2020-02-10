@@ -39,7 +39,7 @@ Response Example:
 * id为某种娃娃的类型，在芯片数据入库时，需要指定芯片和娃的绑定关系
 ### NFC芯片数据入库
 
-END Point: character/uuids
+END Point: character/create
 
 Method: POST
 
